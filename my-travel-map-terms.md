@@ -4,7 +4,7 @@
 <main class="policy-page" markdown="1"># 이용약관 / Terms of Use
 
 - 앱: **My Travel Map** (Android, `com.elne.travel_map`)
-- 시행일 / Effective date: **2026-10-12**
+- 시행일 / Effective date: **2026-10-13**
 - 문의 / Contact: kayno@naver.com
 
 [English version below](#english)
