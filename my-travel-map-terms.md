@@ -1,8 +1,3 @@
----
-title: "My Travel Map Terms of Use"
-permalink: /my-travel-map-terms.html
-layout: null
----
 <style>
 :root{color-scheme:light dark;--bg:#f6f7fb;--card:#fff;--ink:#222338;--muted:#62677a;--accent:#6853d8;--line:#e3e5ee}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}.policy-page{max-width:900px;margin:40px auto;padding:clamp(22px,5vw,56px);background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 50px #18204a12}.policy-page h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.25;letter-spacing:-.03em}.policy-page h2{margin-top:2.3em;padding-bottom:.35em;border-bottom:1px solid var(--line);font-size:1.45rem}.policy-page h3{margin-top:1.7em;font-size:1.1rem}.policy-page a{color:var(--accent);overflow-wrap:anywhere}.policy-page blockquote{margin:1.2em 0;padding:.2em 1em;border-left:4px solid var(--accent);background:#6853d80c;color:var(--muted)}.policy-page table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;font-size:.93em}.policy-page th,.policy-page td{padding:10px 12px;border:1px solid var(--line);vertical-align:top}.policy-page th{background:#6853d80c}.policy-page code{overflow-wrap:anywhere}.policy-page li{padding-left:.18em}.policy-page hr{border:0;border-top:1px solid var(--line);margin:2.5em 0}@media(prefers-color-scheme:dark){:root{--bg:#11121a;--card:#191a24;--ink:#ececf5;--muted:#b4b7c7;--line:#343643}.policy-page{box-shadow:0 18px 50px #0005}}
 </style>
