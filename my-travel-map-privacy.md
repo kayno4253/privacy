@@ -4,7 +4,7 @@
 <main class="policy-page" markdown="1"># 개인정보처리방침 / Privacy Policy
 
 - 앱: **My Travel Map** (Android, 패키지 `com.elne.travel_map`)
-- 시행일 / Effective date: **2026-10-13**
+- 시행일 / Effective date: **2026-10-15**
 - 문의 / Contact: kayno@naver.com
 
 [English version below](#english)
@@ -30,7 +30,7 @@ Herion(이하 "운영자")은 My Travel Map(이하 "앱") 이용자의 개인정
 | 구분 | 항목 | 목적 | 언제 |
 |---|---|---|---|
 | 계정 | 구글 계정 이름, 이메일, 프로필 사진 주소, Firebase 사용자 ID(uid) | 로그인, 계정 구분, 동기화 | 구글 로그인 시 |
-| 여행 기록 | 장소(이름·좌표·나라·지역·방문일·메모·별점·비용·태그·분류), 이동 경로(GPS 좌표·시각), 여행 일정, 예약, 준비물, 경비·멤버 이름, 컬렉션 | 기기 저장·기기 간 동기화·통계 | 로그인 시 Firestore 에 동기화(게스트는 기기에만) |
+| 여행 기록 | 장소(이름·좌표·나라·지역·방문일·메모·별점·비용·태그·분류), 이동 경로(3.2부터 도시 중심 좌표·시각, 이전 버전의 기존 GPS 기록은 유지), 여행 일정, 예약, 준비물, 경비·멤버 이름, 컬렉션 | 기기 저장·기기 간 동기화·통계 | 로그인 시 Firestore 에 동기화(게스트는 기기에만) |
 | 사진 | 이용자가 장소에 붙인 사진 | 장소 기록 표시 | **기기에만 저장**, 서버로 보내지 않음 |
 | 위치 | 정확한 위치(GPS) | 지도에 내 위치 표시, 현재 위치로 장소 추가, 이용자가 시작한 경로 기록 | 앱 사용 중 또는 경로 기록 중(상시 알림)만. 백그라운드 위치 권한은 요청하지 않음 |
 | 공개 프로필 | 표시 이름, 프로필 사진 주소, 공유 설정 | 친구·커뮤니티에서 이용자 표시 | 소셜 기능 사용 시. **이메일은 공개하지 않음** |
@@ -50,12 +50,12 @@ Herion(이하 "운영자")은 My Travel Map(이하 "앱") 이용자의 개인정
 | Google LLC — Firebase Authentication, Cloud Firestore | 미국 등(Google 데이터센터) | 계정 정보, 여행 기록, 커뮤니티 데이터 | 로그인·저장·동기화(처리 위탁) | 계정 삭제 시까지 |
 | Google LLC — Firebase Crashlytics | 미국 | 오류 진단 정보 | 오류 분석(처리 위탁) | 최대 90일 |
 | Google LLC — Google 로그인, Google Play 결제 | 미국 | 로그인 요청, 구매 정보 | 로그인·결제 | Google 방침에 따름 |
-| OpenFreeMap(Hyperknot Software Kft., 타일 서비스 — OpenMapTiles 스키마·OpenStreetMap 데이터, Cloudflare CDN 경유 가능), MapTiler AG(위성 지도, 프리미엄 사용 시) | 헝가리, 스위스 및 CDN 제공 지역 | 보고 있는 지도 영역(타일 요청), 네트워크 메타데이터와 IP 주소(서비스 오류·보안 로그 정책은 [OpenFreeMap 방침](https://openfreemap.org/privacy/) 참고) | 지도 표시 | OpenFreeMap 로그는 보통 7일 이내 삭제. 보안 사고 대응 IP 로그는 최대 30일. Cloudflare·MapTiler 는 각 사 방침에 따름 |
-| OpenStreetMap Foundation — Nominatim(또는 설정된 호환 지오코더) | 영국 | 검색어 또는 주소를 찾을 좌표, IP 주소 | 장소 검색·주소 찾기 | 각 사 방침에 따름 |
 | Norwegian Meteorological Institute — MET Norway | 노르웨이 | 날씨를 볼 장소의 좌표, IP 주소 | 날씨 예보 | 각 사 방침에 따름 |
 | 환율 데이터(currency-api: jsDelivr·Cloudflare, Frankfurter/유럽중앙은행 기준) | 미국·유럽 | IP 주소(개인정보 없음) | 환율 환산 | 각 사 방침에 따름 |
 
-OpenMapTiles 는 기본 지도의 타일 스키마이며 앱 요청을 받는 서비스 제공자가 아닙니다. 지도에는 OpenMapTiles 와 OpenStreetMap 기여자 출처를 표시합니다. ([OpenMapTiles 출처 안내](https://openmaptiles.org/docs/))
+**3.2 이상:** 세계지도와 도시 검색은 앱에 내장된 퍼블릭 도메인 지리 자료를 기기에서 처리합니다. 지도·도시 검색 서버로 검색어나 위치를 보내지 않습니다. 새 이동 기록은 도시 중심 좌표와 확인 시각만 저장하며, 상세 GPS 경로를 새로 저장하지 않습니다. 이전에 저장한 장소와 상세 경로는 그대로 유지됩니다.
+
+**이전 버전:** 3.1 이하에서는 지도 타일 요청이 OpenFreeMap(및 구성된 경우 MapTiler)에, 검색어·주소 조회 좌표가 Nominatim 또는 구성된 지오코더에 IP 주소와 함께 전송될 수 있습니다. 해당 버전의 서비스 제공자 정책이 적용되므로 오프라인 지도 전환을 원하면 앱을 업데이트하세요.
 
 - 국외 이전 시기·방법: 해당 기능을 쓸 때 암호화된 인터넷 통신(HTTPS)으로 전송합니다.
 - 국외 이전을 원하지 않으면 로그인하지 않고(게스트) 쓰거나, 해당 기능을 쓰지 않거나, 설정에서 오류 보고를 끌 수 있습니다.
@@ -87,7 +87,7 @@ OpenMapTiles 는 기본 지도의 타일 스키마이며 앱 요청을 받는 �
 
 - 위치 권한은 "앱 사용 중"만 요청합니다. 경로 기록 중에는 화면을 꺼도 기록이 이어지도록 **상시 알림이 있는
   포그라운드 서비스**를 쓰며, 이용자가 언제든 멈출 수 있습니다.
-- 위치는 이용자가 저장한 장소·경로로만 남고, 날씨 조회(MET Norway)·주소 찾기(지오코더) 때 해당 좌표만 보냅니다.
+- 위치는 이용자가 저장한 장소·경로로만 남고, 날씨 조회(MET Norway) 때 조회할 장소 좌표를 보냅니다. 3.2 이상에서 지도·도시 검색은 기기에서 처리합니다.
 - 다른 이용자에게 **실시간 현재 위치를 공유하지 않습니다**. 친구 공유를 켜면 친구로 추가한 사람에게 다녀온 장소가 보이고,
   피드에 글을 올리면 그 장소의 좌표가 약 1km 단위로 반올림되어 로그인한 이용자에게 보입니다.
 
@@ -141,7 +141,7 @@ why, who it is shared with, and how you can delete it or opt out.
 | Category | Data | Purpose | When |
 |---|---|---|---|
 | Account | Google account name, email, profile photo URL, Firebase user ID | Sign-in, account separation, sync | When you sign in with Google |
-| Travel records | Places (name, coordinates, country, region, visit date, notes, rating, cost, tags, category), routes (GPS points and times), trips, bookings, packing lists, expenses and member names, collections | Storage, sync between devices, statistics | Synced to Firestore when signed in (device only as a guest) |
+| Travel records | Places (name, coordinates, country, region, visit date, notes, rating, cost, tags, category), routes (city-center points and times from version 3.2; existing GPS records are preserved), trips, bookings, packing lists, expenses and member names, collections | Storage, sync between devices, statistics | Synced to Firestore when signed in (device only as a guest) |
 | Photos | Photos you attach to places | Showing your records | **Stored on device only**, never uploaded |
 | Location | Precise location (GPS) | Showing your position, adding a place at your location, recording a route you started | Only while using the App or while recording (ongoing notification). Background location permission is not requested |
 | Public profile | Display name, profile photo URL, sharing setting | Showing you to friends and in the community | When you use social features. **Your email is never public** |
@@ -157,12 +157,12 @@ why, who it is shared with, and how you can delete it or opt out.
 | Google LLC — Firebase Authentication, Cloud Firestore | USA and other Google data centers | Account data, travel records, community data | Sign-in, storage, sync (processor) | Until you delete your account |
 | Google LLC — Firebase Crashlytics | USA | Diagnostics | Crash analysis (processor) | Up to 90 days |
 | Google LLC — Google Sign-In, Google Play Billing | USA | Sign-in request, purchase data | Sign-in, payments | Per Google's policy |
-| OpenFreeMap (Hyperknot Software Kft.; tile service using the OpenMapTiles schema and OpenStreetMap data; may be served via Cloudflare CDN), MapTiler AG (satellite map, Premium only) | Hungary, Switzerland, and CDN locations | Map area being viewed (tile requests), network metadata and IP address (see the [OpenFreeMap privacy policy](https://openfreemap.org/privacy/) for error/security logging) | Showing the map | OpenFreeMap logs are usually deleted within 7 days; IP logs for security incidents may be kept up to 30 days. Cloudflare and MapTiler follow their policies |
-| OpenStreetMap Foundation — Nominatim (or a configured compatible geocoder) | UK | Search text or coordinates to look up, IP address | Place search and address lookup | Per provider |
 | Norwegian Meteorological Institute — MET Norway | Norway | Coordinates of the place you check, IP address | Weather forecasts | Per provider |
 | Exchange-rate data (currency-api via jsDelivr/Cloudflare; Frankfurter / European Central Bank data) | USA, EU | IP address only | Currency conversion | Per provider |
 
-OpenMapTiles is the schema used by the default map tiles, not a service that receives app requests. The map credits OpenMapTiles and OpenStreetMap contributors ([OpenMapTiles attribution guidance](https://openmaptiles.org/docs/)).
+**Version 3.2 and later:** World maps and city search use bundled public-domain geography on the device. No query or location is sent to a map or city-search server. New movement records contain city centers and confirmation times, rather than detailed GPS trails. Existing places and detailed routes are preserved.
+
+**Older versions:** Versions 3.1 and earlier may send tile requests to OpenFreeMap (or MapTiler when configured), and search text or lookup coordinates to Nominatim or a configured geocoder, together with the IP address. Their provider policies apply. Update the app to use offline maps and city lookup.
 
 Data is sent over encrypted connections (HTTPS) when you use the related feature. To avoid transfers, use the App as a guest,
 skip the feature, or turn off crash reports — some features (sync, community) will then be unavailable.
@@ -191,8 +191,7 @@ If Android Auto Backup is on, your travel records and settings (not photos) may 
 ### 6. Location
 
 The App requests "while in use" location only. While you record a route it uses a **foreground service with an ongoing notification**
-so recording continues with the screen off; you can stop it at any time. Coordinates are sent only to MET Norway (weather) and
-the geocoder (address lookup). The App **never shares your live location** with other users. If you enable sharing, people you added as friends can see
+so recording continues with the screen off; you can stop it at any time. Weather requests send the selected place coordinates to MET Norway. Map and city lookup in version 3.2 and later are processed on device. Signed-in saved records continue to sync as described above. The App **never shares your live location** with other users. If you enable sharing, people you added as friends can see
 your visited places; if you post to the feed, that place's coordinates are rounded to about 1 km and visible to signed-in users.
 
 ### 7. Children
