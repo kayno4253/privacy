@@ -4,7 +4,7 @@
 <main class="policy-page" markdown="1"># 이용약관 / Terms of Use
 
 - 앱: **My Travel Map** (Android, `com.elne.travel_map`)
-- 시행일 / Effective date: **2026-10-13**
+- 시행일 / Effective date: **2026-10-15**
 - 문의 / Contact: kayno@naver.com
 
 [English version below](#english)
@@ -26,7 +26,7 @@
 1. 앱은 여행 장소·일정·예약·준비물·경비·이동 경로를 기록하고, 로그인한 이용자에게 기기 간 동기화·친구·커뮤니티·공유 여행
    기능을 제공합니다.
 2. 로그인 없이(게스트) 쓴 기록은 기기에만 저장됩니다. 기기 분실·앱 삭제에 대비해 백업은 이용자가 직접 해야 합니다.
-3. 날씨·환율·지도·주소 검색 정보는 외부 공개 자료를 바탕으로 하며 정확성을 보장하지 않습니다. 여행·안전·금전에 관한
+3. 날씨·환율·지도·도시 검색 정보는 공개 자료를 바탕으로 하며 정확성을 보장하지 않습니다. 여행·안전·금전에 관한
    중요한 결정은 공식 자료로 확인하세요. 환율 환산 결과는 참고용입니다.
 4. 운영자는 점검·장애·외부 서비스 중단 등으로 서비스의 전부 또는 일부를 일시 중단할 수 있습니다.
 
@@ -70,7 +70,7 @@
 
 ### 제10조 (책임의 제한)
 1. 운영자는 고의 또는 중대한 과실이 없는 한 무료 서비스 이용으로 생긴 손해에 책임지지 않습니다.
-2. 외부 서비스(Google, 지도·날씨·환율 제공자)의 장애나 정보 오류, 이용자 기기·네트워크 문제, 이용자가 백업하지 않아
+2. 외부 서비스(Google, 날씨·환율 제공자)의 장애나 정보 오류, 이용자 기기·네트워크 문제, 이용자가 백업하지 않아
    생긴 데이터 손실에 대해서는 운영자의 고의·과실이 없는 한 책임지지 않습니다.
 3. 이용자 사이의 분쟁(공유 여행 경비 정산 등)은 당사자가 해결합니다.
 
@@ -93,9 +93,11 @@ or on this page. If you disagree, stop using the App and delete your account.
 - The App lets you record places, trips, bookings, packing lists, expenses and routes, and — when signed in — sync between devices
   and use friends, community and shared-trip features.
 - Guest data stays on your device; you are responsible for backing it up.
-- Weather, exchange-rate, map and address data come from third-party public sources and may be inaccurate. Verify important
+- Weather, exchange-rate, map and city data come from third-party public sources and may be inaccurate. Verify important
   travel, safety or money decisions with official sources. Currency conversions are estimates.
 - We may suspend the service for maintenance, outages or third-party interruptions.
+
+Version 3.2 and later renders the world atlas and city lookup offline. New movement records connect confirmed city centers with straight lines; distances are approximate, not road distances. Small settlements and brief stops may be missed. Existing detailed records remain available. These features are not navigation or emergency tools.
 
 ### 3. Accounts
 You sign in with your Google account and are responsible for it. You can delete your account in the App at any time; this removes
