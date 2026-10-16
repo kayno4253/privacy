@@ -1,0 +1,321 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elnefolio 개인정보 처리방침</title><style>body{font:16px/1.75 system-ui,sans-serif;max-width:920px;margin:40px auto;padding:0 24px;color:#18243b}h1,h2,h3{line-height:1.3}h2{margin-top:2em}table{border-collapse:collapse;width:100%;display:block;overflow:auto}td,th{border:1px solid #d8dee8;padding:10px}a{color:#435bc4}blockquote{border-left:4px solid #a5b3ed;padding:8px 20px;background:#f3f5fc}</style><main><aside style="padding:18px;background:#eef2ff;border-radius:12px"><strong>Google Play Android 2.0.0 안내 / Android edition</strong><p>현재 Android 배포본은 Google 계정·Drive 연동을 지원하지 않으며 운영자 원격 변환 서버도 설정되어 있지 않습니다. 아래 선택 기능 설명은 해당 기능이 제공되는 웹·데스크톱 배포본에 적용됩니다. Android 시스템 백업·기기 간 전송은 기기 설정과 운영체제 제공자의 정책에 따라 앱 데이터를 처리할 수 있으며, 운영자가 이 백업에 접근하지 않습니다.</p><p>The current Android release has no Google sign-in/Drive integration and no configured operator conversion server. Optional-feature descriptions below apply where those features are available in web/desktop editions. Android backup and device transfer may process app data according to device settings and policies of the OS provider; the operator has no access to those backups.</p></aside><h1 id="elnefolio">Elnefolio 개인정보 처리방침</h1>
+<p><strong>시행일: 2026년 10월 16일</strong></p>
+<p>Herion (이하 &quot;운영자&quot;)는 PDF 필기 앱 Elnefolio(이하 &quot;앱&quot;)을 쓰시는 분의 개인정보와 기록을 소중하게 생각합니다. 이 방침은 앱이 어떤 정보를 어디에 저장하는지, 그리고 무엇을 하지 않는지를 알기 쉽게 설명합니다.</p>
+<blockquote>
+<p>English version follows below. (<a href="#glossa-privacy-policy">English</a>)</p>
+</blockquote>
+<h2 id="section">한눈에 보기</h2>
+<ul>
+<li>계정이나 회원 가입이 필요 없습니다.</li>
+<li>가져온 PDF, 노트, 필기, 이미지는 <strong>기본적으로 이용자 기기의 저장소(IndexedDB)에</strong> 저장됩니다.</li>
+<li>기본 기능은 운영자 서버로 업로드하거나 동기화하지 않습니다. 선택적 Google 연동과 원격 변환의 전송 범위는 4-1항과 4-2항에 설명합니다.</li>
+<li>사용 통계·분석 도구, 추적, 광고를 사용하지 않습니다.</li>
+<li>내보내기 파일과 백업 파일은 이용자가 직접 요청할 때만 만들어집니다.</li>
+<li><strong>Google 계정 연결은 선택 사항입니다.</strong> 연결하지 않으면 Google과 전혀 통신하지 않습니다. 연결하신 경우에도 이용자가 실행한 기능에 필요한 데이터만 이용자 기기와 이용자 본인의 Google 계정 사이에서 직접 오가며, 운영자 서버를 거치지 않습니다(<a href="#google-ko">4-1항</a>).</li>
+<li>사이트 데이터를 지우거나 앱을 제거하면 기기에 저장된 내용이 삭제될 수 있으며, 운영자도 복구할 수 없습니다. <strong>.glossa 백업을 정기적으로 만들어 두시기를 권장합니다.</strong></li>
+</ul>
+<h2 id="section-1">1. 운영자가 수집하는 개인정보</h2>
+<p>기본 문서·필기 기능은 운영자에게 개인정보를 전송하지 않습니다. 이용자가 문의 이메일을 보내면 회신을 위해 이메일 주소와 문의 내용을 받으며, 문의 해결에 필요한 기간 동안 처리합니다. 선택적 원격 변환에 관한 내용은 4-2항을 따릅니다.</p>
+<h2 id="section-2">2. 이용자 기기 안에만 저장되는 정보</h2>
+<p>앱이 동작하려면 아래 정보를 이용자 기기의 브라우저 저장소에 보관해야 합니다. 기본 사용에서는 기기 밖으로 전송되지 않습니다. 이용자가 선택한 내보내기·백업·Google 연동·원격 변환은 아래 설명에 따라 데이터를 전송할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>저장 위치</th>
+<th>저장하는 내용</th>
+<th>목적</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IndexedDB</td>
+<td>가져온 PDF와 이미지 원본, 노트, 펜·형광펜·마스킹·도형·텍스트 필기, 폴더, 표지 썸네일, 문서 정보(제목, 만든 날짜, 마지막으로 본 페이지 등), 앱 설정</td>
+<td>문서를 보관하고 다시 열기, 설정 기억</td>
+</tr>
+<tr>
+<td>localStorage</td>
+<td>펜 사용 감지 여부, 사이드바 표시 상태 같은 간단한 화면 상태</td>
+<td>화면을 이전 상태 그대로 보여 주기</td>
+</tr>
+<tr>
+<td>Cache Storage (서비스 워커)</td>
+<td>앱 실행에 필요한 파일(HTML, JavaScript, CSS, 아이콘, PDF 표시용 글꼴·문자표 데이터)</td>
+<td>인터넷 없이 실행</td>
+</tr>
+</tbody>
+</table>
+<p>암호로 보호된 PDF를 열 때 입력하신 암호는 파일을 여는 동안 기기 메모리에서만 쓰이며, 어디에도 저장되지 않습니다.</p>
+<h2 id="section-3">3. 네트워크 통신</h2>
+<ul>
+<li>앱을 처음 열거나 업데이트할 때, 앱을 제공하는 웹 서버에서 앱 실행 파일을 내려받습니다. 그 뒤에는 서비스 워커가 보관한 파일로 인터넷 연결 없이도 실행됩니다.</li>
+<li>앱이 열려 있는 동안 약 1시간마다 새 버전이 있는지 확인합니다. 이때 요청하는 것은 앱 실행 파일뿐이며, 이용자의 문서나 필기는 전송하지 않습니다.</li>
+<li>앱을 제공하는 웹 호스팅 서버(웹 배포본을 이용하는 경우 해당 배포 사이트의 서버)는 일반 웹사이트와 마찬가지로 접속 기록(IP 주소, 요청 시각, 브라우저 종류 등)을 자동으로 남길 수 있습니다. 이 기록은 호스팅 서비스의 보안·운영 목적으로 해당 서비스의 정책에 따라 처리되며, 운영자는 이를 이용자 식별, 분석, 마케팅에 사용하지 않습니다.</li>
+<li>외부 글꼴 서버, CDN, 분석 스크립트, 광고 네트워크 등 제3자 서버에는 연결하지 않습니다. 예외는 이용자가 직접 켠 기능뿐입니다. Google 연동을 쓸 때 Google 서버와(<a href="#google-ko">4-1항</a>), 문서 변환을 쓸 때 이 기기의 Elnefolio 도우미 또는 동의하신 변환 서버와 통신합니다(<a href="#convert-ko">4-2항</a>).</li>
+</ul>
+<h2 id="section-4">4. 내보내기, 공유, 백업</h2>
+<ul>
+<li>PDF, 이미지(PNG), Elnefolio 백업(.glossa) 파일은 이용자가 내보내기를 실행할 때만 만들어집니다.</li>
+<li>만들어진 파일은 이용자가 고른 곳(다운로드 폴더, 공유 시트에서 고른 앱 등)으로만 전달됩니다. 그 이후의 처리는 해당 앱이나 서비스의 정책을 따릅니다.</li>
+<li>백업 파일에는 문서 원본과 필기가 별도 암호화 없이 담깁니다(암호로 보호된 PDF는 원래의 암호화가 그대로 유지됩니다). 백업 파일은 안전한 곳에 보관해 주세요.</li>
+</ul>
+<p><a id="google-ko"></a></p>
+<h2 id="google">4-1. Google 연동 (선택 기능)</h2>
+<p>Google 연동은 기본적으로 꺼져 있으며, 이용자가 <strong>설정 › Google 계정</strong>에서 직접 계정을 연결해야 동작합니다. 연결하지 않으면 앱은 Google의 스크립트를 불러오지도, Google 서버에 연결하지도 않습니다.</p>
+<p><strong>요청하는 권한과 쓰는 곳</strong></p>
+<table>
+<thead>
+<tr>
+<th>권한</th>
+<th>쓰는 곳</th>
+<th>요청 시점</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>기본 프로필(이름, 이메일 주소)</td>
+<td>어떤 계정이 연결되었는지 화면에 표시</td>
+<td>계정을 연결할 때</td>
+</tr>
+<tr>
+<td>Google Drive — <code>drive.file</code> (이용자가 직접 고른 파일과 Elnefolio가 만든 파일만)</td>
+<td>Drive에서 파일 가져오기, 내보낸 파일 저장, 백업·복원, Office 문서 PDF 변환</td>
+<td>계정을 연결할 때</td>
+</tr>
+<tr>
+<td>Google 캘린더 — 읽기 전용 (<code>calendar.readonly</code>)</td>
+<td>플래너에 일정 표시</td>
+<td>캘린더 기능을 처음 쓸 때 따로 요청</td>
+</tr>
+</tbody>
+</table>
+<p>Elnefolio는 Drive의 다른 파일을 보거나 바꿀 수 없고, 캘린더 일정을 만들거나 바꾸지 않습니다.</p>
+<p><strong>Google과 주고받는 데이터 (이용자가 해당 기능을 실행할 때만)</strong></p>
+<ul>
+<li><strong>계정 연결</strong>: 로그인과 권한 동의는 Google의 창에서 Google이 직접 처리합니다. Elnefolio는 연결된 계정의 이름과 이메일 주소를 받아 기기 설정에 저장합니다.</li>
+<li><strong>Drive에서 가져오기</strong>: Google의 파일 선택 창에서 고르신 파일만 내려받아 기기에 저장합니다. Google 문서·스프레드시트·프레젠테이션은 Google이 PDF로 변환해 보내 줍니다.</li>
+<li><strong>Drive에 저장·백업</strong>: 내보내기에서 고르신 파일, 또는 백업 파일(.glossa — 모든 문서, 필기, 이미지 포함)을 이용자 Drive의 ‘Glossa’ 폴더에 올립니다. 백업은 최근 10개까지 보관하며, 그보다 오래된 백업은 Elnefolio가 삭제합니다. <strong>매일 자동 백업</strong>을 켜신 경우 앱이 열려 있고 인터넷에 연결되어 있을 때 하루 한 번 같은 방식으로 백업합니다.</li>
+<li><strong>Office 문서 변환</strong>: Word·Excel·PowerPoint 등의 파일을 PDF로 바꾸기 위해 이용자 Drive에 <em>임시 사본</em>을 올려 Google이 변환하게 하고, PDF를 받은 즉시 사본을 삭제합니다. 변환이 실패하거나 취소되어도 삭제하며, 삭제하지 못한 사본은 다음 실행 때 찾아 지웁니다.</li>
+<li><strong>캘린더</strong>: 설정에서 고르신 캘린더(기본: 기본 캘린더)의 일정 제목과 날짜·시간을 읽어 플래너에 표시합니다.</li>
+<li><strong>공휴일</strong>: 플래너의 공휴일 표시를 위해 Google의 공개 ‘대한민국의 휴일’ 캘린더를 조회합니다. 이 요청에는 이용자 계정 정보가 포함되지 않으며, 결과는 연도별로 기기에 저장됩니다.</li>
+<li>Google 기능을 쓸 때 앱은 <code>accounts.google.com</code>, <code>apis.google.com</code>에서 Google의 스크립트를 불러오고 <code>www.googleapis.com</code> 등 Google 서버와 통신합니다. 이때 Google은 일반 웹 요청과 마찬가지로 IP 주소 등 접속 정보를 받을 수 있으며, 이는 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 처리됩니다.</li>
+</ul>
+<p><strong>기기에 저장하는 것과 저장하지 않는 것</strong></p>
+<ul>
+<li>Google의 <strong>액세스 토큰은 앱이 열려 있는 동안 메모리에만</strong> 두며(최대 약 1시간) 어디에도 저장하지 않습니다.</li>
+<li>기기 설정(IndexedDB)에는 연결한 계정의 이메일 주소와 이름, 허용된 권한 목록, ‘Glossa’ 폴더 ID, 마지막 백업 시각, 플래너에 쓸 캘린더 목록, 공휴일 캐시만 저장합니다.</li>
+<li>모든 통신은 이용자 기기와 Google 사이에서 직접 이루어집니다. <strong>운영자는 이용자의 Google 계정 정보, Drive 파일, 캘린더 일정을 받거나 볼 수 없습니다.</strong></li>
+</ul>
+<p><strong>Google API 서비스 사용자 데이터 정책 준수 (제한적 사용)</strong></p>
+<p>Elnefolio가 Google API로부터 받은 정보를 사용하고 다른 앱으로 전송하는 방식은 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>의 <strong>제한적 사용(Limited Use)</strong> 요구사항을 포함하여 이 정책을 준수합니다. 구체적으로 Elnefolio는 Google 사용자 데이터를</p>
+<ul>
+<li>이용자가 화면에서 직접 요청한 기능(위에 적은 가져오기, 저장, 백업·복원, 변환, 일정·공휴일 표시)을 제공하는 데에만 사용하고,</li>
+<li>광고(맞춤형 광고 포함)에 사용하지 않으며, 판매하거나 제3자에게 넘기지 않고,</li>
+<li>사람이 열람하지 않으며(이용자의 명시적 동의가 있거나 보안·법적 의무상 필요한 경우 제외),</li>
+<li>일반화된 인공지능·머신러닝 모델을 만들거나 학습시키는 데 사용하지 않습니다.</li>
+</ul>
+<p><strong>연결 해제와 권한 철회</strong></p>
+<ul>
+<li><strong>설정 › Google 계정 › 연결 해제</strong>를 누르면 Elnefolio에 준 Google 접근 권한을 철회(토큰 취소)하고, 기기에 저장된 Google 관련 정보를 지웁니다.</li>
+<li>언제든지 <a href="https://myaccount.google.com/connections">Google 계정 › 타사 앱 및 서비스</a>에서도 Elnefolio의 접근 권한을 삭제하실 수 있습니다.</li>
+<li>연결을 해제해도 이용자 Drive에 저장된 내보내기 파일과 백업은 지워지지 않습니다. 필요 없으시면 Drive의 ‘Glossa’ 폴더에서 직접 삭제해 주세요.</li>
+</ul>
+<p><a id="convert-ko"></a></p>
+<h2 id="elnefolio-1">4-2. 문서 변환 (Elnefolio 도우미 · 변환 서버, 선택 기능)</h2>
+<p>Word·Excel·PowerPoint·한글 등 PDF가 아닌 문서를 가져오면, 필기할 수 있도록 PDF로 바꿉니다. 변환은 다음 중 사용할 수 있는 방법으로 이뤄집니다.</p>
+<ul>
+<li><strong>이 기기의 Elnefolio 도우미</strong>: 이용자 컴퓨터에서 실행되는 프로그램이 같은 컴퓨터의 Microsoft Office·한컴오피스 또는 LibreOffice로 변환합니다. 문서는 컴퓨터 밖으로 나가지 않습니다. 도우미는 변환이 끝나면 임시 파일을 바로 지웁니다.</li>
+<li><strong>운영자의 변환 서버</strong>(설정된 경우): 문서를 보내기 전에 앱이 먼저 알리고 동의를 받습니다. 서버는 문서를 변환한 직후 삭제하며, 파일 이름이나 내용을 기록하거나 보관하지 않습니다. 운영 기록에는 파일 형식, 크기, 처리 시간, 결과만 남습니다.</li>
+<li><strong>Google Drive</strong>(Google을 연결한 경우): 4-1항에 따라 이용자의 Drive에 임시 사본을 만들어 변환하고 곧바로 삭제합니다. 이때도 보내기 전에 동의를 받습니다.</li>
+<li>변환된 PDF와 원본 파일은 이용자 기기에만 저장됩니다. 설정 › 문서 변환에서 기기 밖 전송에 대한 동의를 언제든 취소할 수 있습니다.</li>
+<li>바탕화면 기능을 쓰면 만든 이미지가 이 기기의 도우미 데이터 폴더에 저장되어 운영체제의 바탕화면으로 지정됩니다(최근 3개만 보관).</li>
+</ul>
+<h2 id="section-5">5. 제3자 제공과 처리 위탁</h2>
+<p>운영자는 이용자의 문서나 필기를 광고 목적으로 제공하거나 판매하지 않습니다. 기본 기능은 기기에서 처리하며, 문의 응대와 선택적 원격 변환에는 사용자가 제공한 정보가 처리될 수 있습니다. Google 연동을 사용하시는 경우, 해당 데이터는 이용자가 선택한 서비스인 Google과 이용자 기기 사이에서 직접 오가며 운영자에게 전달되지 않습니다(4-1항).</p>
+<h2 id="section-6">6. 앱 마켓에서 설치한 경우</h2>
+<p>Microsoft Store, Google Play 등 앱 마켓을 통해 설치하신 경우, 다운로드·결제·오류 보고처럼 마켓이 처리하는 정보는 각 마켓 운영사의 개인정보 처리방침을 따릅니다. Android 버전은 앱에 포함된 화면을 Android System WebView로 표시합니다. 운영체제와 WebView 자체의 정보 처리는 해당 제공자의 방침을 따릅니다.</p>
+<h2 id="section-7">7. 보관 기간과 삭제</h2>
+<ul>
+<li>기기에 저장된 데이터는 이용자가 직접 지울 때까지 남아 있습니다.</li>
+<li>휴지통으로 옮긴 문서는 30일이 지나면 자동으로 영구 삭제됩니다.</li>
+<li>브라우저에서 이 사이트의 데이터(쿠키 및 사이트 데이터)를 지우면 기기에 저장된 모든 문서·필기·설정이 삭제됩니다. 앱을 제거할 때에도 기기와 브라우저에 따라 함께 삭제될 수 있습니다. 운영자는 삭제된 데이터를 복구할 수 없습니다.</li>
+<li>기기 저장 공간이 부족하면 브라우저가 데이터를 정리할 수 있습니다. <strong>설정 › 저장 공간</strong>에서 '저장 공간 보호'를 요청하시고, 정기적으로 '전체 백업 내보내기'로 .glossa 파일을 만들어 두시기를 권장합니다.</li>
+</ul>
+<h2 id="section-8">8. 이용자의 권리</h2>
+<p>모든 데이터가 이용자 기기에만 있으므로, 이용자는 언제든지 앱 안에서 직접 문서를 열람·수정·내보내기·삭제하실 수 있습니다. 운영자가 보유한 이용자 데이터가 없기 때문에 별도로 열람이나 삭제를 요청하실 필요가 없습니다. 궁금하신 점은 아래 연락처로 문의해 주세요.</p>
+<h2 id="section-9">9. 안전을 위한 조치</h2>
+<ul>
+<li>앱은 HTTPS로만 제공됩니다.</li>
+<li>브라우저의 동일 출처 정책에 따라, 저장된 데이터는 Elnefolio만 읽을 수 있는 공간에 보관됩니다.</li>
+<li>기기를 잃어버릴 때를 대비해 화면 잠금과 기기 암호화를 사용하시기를 권장합니다.</li>
+</ul>
+<h2 id="section-10">10. 아동의 개인정보</h2>
+<p>앱은 어떤 개인정보도 수집하지 않으며, 이 방침은 연령과 관계없이 동일하게 적용됩니다.</p>
+<h2 id="section-11">11. 방침의 변경</h2>
+<p>이 방침을 바꿀 때에는 시행일과 함께 앱 또는 이 페이지에 알려 드립니다. 정보 처리 방식이 달라지는 중요한 변경은 시행 7일 전에, 이용자에게 불리한 변경은 시행 30일 전에 알려 드립니다.</p>
+<h2 id="section-12">12. 문의처</h2>
+<ul>
+<li>운영자: Herion</li>
+<li>개인정보 보호책임자: Herion 운영 담당자</li>
+<li>이메일: kayno@naver.com</li>
+</ul>
+<hr />
+<p><a id="glossa-privacy-policy"></a></p>
+<h1 id="elnefolio-privacy-policy">Elnefolio Privacy Policy</h1>
+<p><strong>Effective date: October 16, 2026</strong></p>
+<p>Herion (&quot;we&quot;) makes Elnefolio, a PDF annotation and handwritten-notes app (the &quot;app&quot;). This policy explains what the app stores, where it stores it, and what it never does.</p>
+<h2 id="at-a-glance">At a glance</h2>
+<ul>
+<li>No account or sign-up.</li>
+<li>Your imported PDFs, notebooks, handwriting and images are stored <strong>in local storage (IndexedDB) on your device by default</strong>.</li>
+<li>Basic features do not upload or sync documents to our servers. Optional Google integration and remote conversion are described in sections 4a and 4b.</li>
+<li>No analytics, no tracking, no ads.</li>
+<li>Export and backup files are created only when you ask for them.</li>
+<li><strong>Connecting a Google account is optional.</strong> Without it, the app never talks to Google. If you connect one, only the data needed for the feature you use travels directly between your device and your own Google account — never through our servers (<a href="#google-en">section 4a</a>).</li>
+<li>Clearing the app's site data or uninstalling it can delete everything stored on the device, and we cannot recover it. <strong>We recommend making regular .glossa backups.</strong></li>
+</ul>
+<h2 id="information-we-collect">1. Information we collect</h2>
+<p>Basic document and handwriting features do not send personal information to the operator. If you email support, we receive your email address and inquiry and process them for as long as needed to resolve the inquiry. Optional remote conversion follows section 4b.</p>
+<h2 id="information-stored-only-on-your-device">2. Information stored only on your device</h2>
+<p>To work, the app keeps the following in your browser's storage on your device. It stays on the device during basic use. Exports, backups, Google integration and remote conversion you select may transmit data as explained below.</p>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>What</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IndexedDB</td>
+<td>Imported PDF and image files, notebooks, pen/highlighter/masking/shape/text annotations, folders, cover thumbnails, document details (title, creation date, last page viewed, etc.), app settings</td>
+<td>Keeping and reopening your documents; remembering your settings</td>
+</tr>
+<tr>
+<td>localStorage</td>
+<td>Small bits of interface state, such as whether a stylus has been detected or whether the sidebar is open</td>
+<td>Restoring the screen as you left it</td>
+</tr>
+<tr>
+<td>Cache Storage (service worker)</td>
+<td>The app's own files (HTML, JavaScript, CSS, icons, fonts and character maps used to display PDFs)</td>
+<td>Running offline</td>
+</tr>
+</tbody>
+</table>
+<p>If you open a password-protected PDF, the password is used only in memory while the file is being opened and is never stored.</p>
+<h2 id="network-activity">3. Network activity</h2>
+<ul>
+<li>When you first open or update the app, its files are downloaded from the web server that hosts it. After that, the service worker serves them from its cache so the app works without a connection.</li>
+<li>While the app is open, it checks for a new version about once an hour. Only the app's own files are requested; your documents and notes are never sent.</li>
+<li>Like any website, the hosting server (the server of the distribution website, when using the web edition) may automatically keep standard access logs (IP address, time of request, browser type). These are processed by the hosting provider for security and operations under its own policy. We do not use them to identify, profile or market to you.</li>
+<li>The app does not contact any third-party servers — no web-font services, CDNs, analytics scripts or ad networks. The only exceptions are features you turn on yourself: Google's servers when you use the Google integration (<a href="#google-en">section 4a</a>), and the Elnefolio Helper on this device or a conversion server you agreed to when you convert documents (<a href="#convert-en">section 4b</a>).</li>
+</ul>
+<h2 id="export-sharing-and-backups">4. Export, sharing and backups</h2>
+<ul>
+<li>PDF, image (PNG) and Elnefolio backup (.glossa) files are created only when you run an export.</li>
+<li>The file goes only where you send it (your downloads folder, or an app you pick from the share sheet). What happens after that is governed by that app or service.</li>
+<li>Backup files contain your original documents and notes without additional encryption (password-protected PDFs keep their original encryption). Please store backups somewhere safe.</li>
+</ul>
+<p><a id="google-en"></a></p>
+<h2 id="a.google-integration-optional">4a. Google integration (optional)</h2>
+<p>The Google integration is off by default and works only after you connect an account in <strong>Settings › Google Account</strong>. Until then, the app neither loads Google's scripts nor contacts Google's servers.</p>
+<p><strong>Permissions requested and what they are for</strong></p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Used for</th>
+<th>Requested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic profile (name, email address)</td>
+<td>Showing which account is connected</td>
+<td>When you connect</td>
+</tr>
+<tr>
+<td>Google Drive — <code>drive.file</code> (only files you pick and files Elnefolio creates)</td>
+<td>Importing from Drive, saving exports, backup and restore, converting Office documents to PDF</td>
+<td>When you connect</td>
+</tr>
+<tr>
+<td>Google Calendar — read-only (<code>calendar.readonly</code>)</td>
+<td>Showing events in planners</td>
+<td>Separately, the first time you use calendar features</td>
+</tr>
+</tbody>
+</table>
+<p>Elnefolio cannot see or change any other files in your Drive, and it never creates or changes calendar events.</p>
+<p><strong>Data exchanged with Google (only when you use the feature)</strong></p>
+<ul>
+<li><strong>Connecting</strong>: sign-in and consent happen in Google's own window, handled by Google. Elnefolio receives the connected account's name and email address and stores them in the app's settings on your device.</li>
+<li><strong>Import from Drive</strong>: only the files you choose in Google's file picker are downloaded and stored on your device. Google Docs, Sheets and Slides are converted to PDF by Google.</li>
+<li><strong>Save to Drive / backups</strong>: the file you export, or a backup file (.glossa — all documents, notes and images), is uploaded to the “Elnefolio” folder in your Drive. The newest 10 backups are kept; Elnefolio deletes older ones. If you turn on <strong>daily automatic backup</strong>, the same happens once a day while the app is open and online.</li>
+<li><strong>Office conversion</strong>: to turn a Word, Excel or PowerPoint file into a PDF, a <em>temporary copy</em> is uploaded to your Drive for Google to convert, and deleted as soon as the PDF is received — also when conversion fails or is canceled. Any copy that could not be deleted is found and removed on a later run.</li>
+<li><strong>Calendar</strong>: the titles, dates and times of events in the calendars you choose (by default, your primary calendar) are read and shown in planners.</li>
+<li><strong>Holidays</strong>: to mark public holidays in planners, Google's public “Holidays in South Korea” calendar is queried. This request contains no account information, and the result is cached per year on your device.</li>
+<li>When a Google feature is used, the app loads Google's scripts from <code>accounts.google.com</code> and <code>apis.google.com</code> and talks to Google servers such as <code>www.googleapis.com</code>. Like any web request, Google may receive connection information such as your IP address, which Google handles under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+</ul>
+<p><strong>What is and isn't stored on your device</strong></p>
+<ul>
+<li>Google <strong>access tokens are kept in memory only while the app is open</strong> (about one hour at most) and are never stored.</li>
+<li>The app's settings (IndexedDB) keep only the connected email address and name, the list of granted permissions, the “Elnefolio” folder ID, the time of the last backup, the calendars chosen for planners, and the holiday cache.</li>
+<li>All traffic goes directly between your device and Google. <strong>We never receive or see your Google account information, Drive files or calendar events.</strong></li>
+</ul>
+<p><strong>Google API Services User Data Policy (Limited Use)</strong></p>
+<p>Elnefolio's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the <strong>Limited Use</strong> requirements. In particular, Elnefolio uses Google user data</p>
+<ul>
+<li>only to provide the features you request in the app (importing, saving, backup and restore, conversion, and showing events and holidays, as described above);</li>
+<li>never for advertising, including personalized ads, and never sells it or transfers it to third parties;</li>
+<li>never lets humans read it, unless you explicitly agree or it is necessary for security purposes or to comply with the law;</li>
+<li>never to develop, improve or train generalized artificial intelligence or machine-learning models.</li>
+</ul>
+<p><strong>Disconnecting and revoking access</strong></p>
+<ul>
+<li><strong>Settings › Google Account › Disconnect</strong> revokes the access you gave Elnefolio (the token is revoked) and deletes the Google-related information stored on your device.</li>
+<li>You can also remove Elnefolio's access at any time under <a href="https://myaccount.google.com/connections">Google Account › Third-party apps &amp; services</a>.</li>
+<li>Disconnecting does not delete exports and backups already saved in your Drive. Delete them from the “Elnefolio” folder in Drive if you no longer need them.</li>
+</ul>
+<p><a id="convert-en"></a></p>
+<h2 id="b.document-conversion-elnefolio-helper-conversion-server-optional">4b. Document conversion (Elnefolio Helper, conversion server — optional)</h2>
+<p>When you import a document that is not a PDF (Word, Excel, PowerPoint, Hangul…), it is converted to PDF so you can write on it, using whichever of these is available:</p>
+<ul>
+<li><strong>Elnefolio Helper on this device</strong>: a program running on your own computer converts it with Microsoft Office, Hancom Office or LibreOffice installed there. The document never leaves your computer, and temporary files are deleted right after conversion.</li>
+<li><strong>The operator's conversion server</strong> (if configured): the app tells you and asks for your consent before sending anything. The server deletes the document immediately after converting it and does not log or keep file names or contents; its logs only record file type, size, duration and outcome.</li>
+<li><strong>Google Drive</strong> (if you connected Google): a temporary copy is converted in your Drive and deleted right away, as described in section 4a. You are asked before anything is sent.</li>
+<li>The converted PDF and the original file are stored only on your device. You can withdraw consent for off-device conversion at any time in Settings › Documents.</li>
+<li>If you use the wallpaper feature, the generated image is saved in the helper's data folder on this device and set as your desktop background (only the latest three are kept).</li>
+</ul>
+<h2 id="sharing-with-third-parties">5. Sharing with third parties</h2>
+<p>We do not sell documents or notes or share them for advertising. Basic features run locally; support inquiries and optional remote conversion may process information you provide. If you use the Google integration, that data travels directly between your device and Google — a service you choose — and never reaches us (section 4a).</p>
+<h2 id="installing-from-an-app-store">6. Installing from an app store</h2>
+<p>If you install Elnefolio from the Microsoft Store, Google Play or another store, information the store handles — such as downloads, payments and crash reports — is governed by that store's privacy policy. The Android edition displays its bundled interface using Android System WebView. The operating system and WebView provider govern their own data processing.</p>
+<h2 id="retention-and-deletion">7. Retention and deletion</h2>
+<ul>
+<li>Data on your device stays there until you delete it.</li>
+<li>Documents moved to Trash are permanently deleted automatically after 30 days.</li>
+<li>Clearing this site's data in your browser (&quot;cookies and site data&quot;) deletes all documents, notes and settings stored on the device, and uninstalling the app may also delete them, depending on your device and browser. We cannot restore deleted data.</li>
+<li>When a device runs low on space, the browser may clear site data. In <strong>Settings › Storage</strong>, tap <strong>Request Protection</strong>, and use <strong>Export Full Backup</strong> regularly to keep a .glossa copy.</li>
+</ul>
+<h2 id="your-rights">8. Your rights</h2>
+<p>All of your data lives on your device, so you can view, edit, export or delete it in the app at any time. For questions or deletion requests concerning a support inquiry, contact us at the address below.</p>
+<h2 id="security">9. Security</h2>
+<ul>
+<li>The app is served over HTTPS only.</li>
+<li>Under the browser's same-origin policy, stored data is kept in a space that only Elnefolio can read.</li>
+<li>To protect your notes if a device is lost, we recommend using a screen lock and device encryption.</li>
+</ul>
+<h2 id="children">10. Children</h2>
+<p>The app collects no personal information from anyone, and this policy applies equally to users of all ages.</p>
+<h2 id="changes-to-this-policy">11. Changes to this policy</h2>
+<p>If we change this policy, we will post the new version with its effective date in the app or on this page. For material changes to how data is handled, we will give at least 7 days' notice, or 30 days' notice for changes that are less favorable to you.</p>
+<h2 id="contact">12. Contact</h2>
+<ul>
+<li>Operator: Herion</li>
+<li>Privacy officer: Herion operator</li>
+<li>Email: kayno@naver.com</li>
+</ul>
+</main></html>
+
