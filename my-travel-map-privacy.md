@@ -53,7 +53,7 @@ Herion(이하 "운영자")은 My Travel Map(이하 "앱") 이용자의 개인정
 | Norwegian Meteorological Institute — MET Norway | 노르웨이 | 날씨를 볼 장소의 좌표, IP 주소 | 날씨 예보 | 각 사 방침에 따름 |
 | 환율 데이터(currency-api: jsDelivr·Cloudflare, Frankfurter/유럽중앙은행 기준) | 미국·유럽 | IP 주소(개인정보 없음) | 환율 환산 | 각 사 방침에 따름 |
 
-**3.2 이상:** 세계지도와 도시 검색은 앱에 내장된 퍼블릭 도메인 지리 자료를 기기에서 처리합니다. 지도·도시 검색 서버로 검색어나 위치를 보내지 않습니다. 새 이동 기록은 도시 중심 좌표와 확인 시각만 저장하며, 상세 GPS 경로를 새로 저장하지 않습니다. 이전에 저장한 장소와 상세 경로는 그대로 유지됩니다.
+**3.2 버전:** 세계지도와 도시 검색은 앱에 내장된 퍼블릭 도메인 지리 자료를 기기에서 처리합니다. 지도·도시 검색 서버로 검색어나 위치를 보내지 않습니다. 새 이동 기록은 도시 중심 좌표와 확인 시각만 저장하며, 상세 GPS 경로를 새로 저장하지 않습니다. 이전에 저장한 장소와 상세 경로는 그대로 유지됩니다.
 
 **이전 버전:** 3.1 이하에서는 지도 타일 요청이 OpenFreeMap(및 구성된 경우 MapTiler)에, 검색어·주소 조회 좌표가 Nominatim 또는 구성된 지오코더에 IP 주소와 함께 전송될 수 있습니다. 해당 버전의 서비스 제공자 정책이 적용되므로 오프라인 지도 전환을 원하면 앱을 업데이트하세요.
 
@@ -87,7 +87,7 @@ Herion(이하 "운영자")은 My Travel Map(이하 "앱") 이용자의 개인정
 
 - 위치 권한은 "앱 사용 중"만 요청합니다. 경로 기록 중에는 화면을 꺼도 기록이 이어지도록 **상시 알림이 있는
   포그라운드 서비스**를 쓰며, 이용자가 언제든 멈출 수 있습니다.
-- 위치는 이용자가 저장한 장소·경로로만 남고, 날씨 조회(MET Norway) 때 조회할 장소 좌표를 보냅니다. 3.2 이상에서 지도·도시 검색은 기기에서 처리합니다.
+- 위치는 이용자가 저장한 장소·경로로만 남고, 날씨 조회(MET Norway) 때 조회할 장소 좌표를 보냅니다. 기본 세계지도·도시 검색은 기기에서 처리하며, 3.3의 상세 지역 다운로드는 아래 안내를 따릅니다.
 - 다른 이용자에게 **실시간 현재 위치를 공유하지 않습니다**. 친구 공유를 켜면 친구로 추가한 사람에게 다녀온 장소가 보이고,
   피드에 글을 올리면 그 장소의 좌표가 약 1km 단위로 반올림되어 로그인한 이용자에게 보입니다.
 
@@ -160,7 +160,7 @@ why, who it is shared with, and how you can delete it or opt out.
 | Norwegian Meteorological Institute — MET Norway | Norway | Coordinates of the place you check, IP address | Weather forecasts | Per provider |
 | Exchange-rate data (currency-api via jsDelivr/Cloudflare; Frankfurter / European Central Bank data) | USA, EU | IP address only | Currency conversion | Per provider |
 
-**Version 3.2 and later:** World maps and city search use bundled public-domain geography on the device. No query or location is sent to a map or city-search server. New movement records contain city centers and confirmation times, rather than detailed GPS trails. Existing places and detailed routes are preserved.
+**Version 3.2:** World maps and city search use bundled public-domain geography on the device. No query or location is sent to a map or city-search server. New movement records contain city centers and confirmation times, rather than detailed GPS trails. Existing places and detailed routes are preserved.
 
 **Older versions:** Versions 3.1 and earlier may send tile requests to OpenFreeMap (or MapTiler when configured), and search text or lookup coordinates to Nominatim or a configured geocoder, together with the IP address. Their provider policies apply. Update the app to use offline maps and city lookup.
 
@@ -210,3 +210,10 @@ Privacy officer: Herion — kayno@naver.com.
 We will announce changes in the App or on this page at least 7 days in advance (30 days for changes unfavorable to you).
 
 </main>
+
+
+## 2026-10-24: 선택형 오프라인 상세 지도 / Optional offline regional maps
+
+3.3부터 기본 세계지도와 도시 검색은 기기 내에서 동작합니다. 사용자가 “이 지역 저장”을 누를 때만 선택 구역의 타일 번호와 IP 주소, 앱 식별 문자열이 OpenFreeMap(tiles.openfreemap.org)에 전송됩니다. 이 요청 구역은 선택한 위치를 추론할 수 있습니다. 저장 완료된 지도는 이후 네트워크 없이 표시하며 지역 삭제는 앱의 오프라인 지도 화면에서 할 수 있습니다. 지도 다운로드는 선택 사항이며 운영자가 지도 서버를 운영하지 않습니다. 날씨·로그인·동기화 등 다른 기능의 통신은 별개입니다.
+
+From 3.3, the bundled world overview and city search run on-device. Only when the user selects Save this region, the selected region tile coordinates, IP address and app identifier are sent to OpenFreeMap (tiles.openfreemap.org). The requested region may reveal the selected location. Completed packs render without further network requests and can be removed in Offline maps. Downloading is optional; no operator-hosted map server is used. Weather, login and synchronization have separate network behavior.
