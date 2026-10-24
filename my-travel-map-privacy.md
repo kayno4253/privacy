@@ -55,7 +55,7 @@ Herion(이하 "운영자")은 My Travel Map(이하 "앱") 이용자의 개인정
 
 **3.2 버전:** 세계지도와 도시 검색은 앱에 내장된 퍼블릭 도메인 지리 자료를 기기에서 처리합니다. 지도·도시 검색 서버로 검색어나 위치를 보내지 않습니다. 새 이동 기록은 도시 중심 좌표와 확인 시각만 저장하며, 상세 GPS 경로를 새로 저장하지 않습니다. 이전에 저장한 장소와 상세 경로는 그대로 유지됩니다.
 
-**이전 버전:** 3.1 이하에서는 지도 타일 요청이 OpenFreeMap(및 구성된 경우 MapTiler)에, 검색어·주소 조회 좌표가 Nominatim 또는 구성된 지오코더에 IP 주소와 함께 전송될 수 있습니다. 해당 버전의 서비스 제공자 정책이 적용되므로 오프라인 지도 전환을 원하면 앱을 업데이트하세요.
+**이전 버전:** 3.1 이하에서는 지도 타일 요청이 OpenFreeMap(및 구성된 경우 MapTiler)에, 검색어·주소 조회 좌표가 Nominatim 또는 구성된 지오코더에 IP 주소와 함께 전송될 수 있습니다. 해당 버전의 서비스 제공자 정책이 적용됩니다. 최신 버전은 지도 설정에서 온라인 표시를 끌 수 있습니다.
 
 - 국외 이전 시기·방법: 해당 기능을 쓸 때 암호화된 인터넷 통신(HTTPS)으로 전송합니다.
 - 국외 이전을 원하지 않으면 로그인하지 않고(게스트) 쓰거나, 해당 기능을 쓰지 않거나, 설정에서 오류 보고를 끌 수 있습니다.
@@ -162,7 +162,7 @@ why, who it is shared with, and how you can delete it or opt out.
 
 **Version 3.2:** World maps and city search use bundled public-domain geography on the device. No query or location is sent to a map or city-search server. New movement records contain city centers and confirmation times, rather than detailed GPS trails. Existing places and detailed routes are preserved.
 
-**Older versions:** Versions 3.1 and earlier may send tile requests to OpenFreeMap (or MapTiler when configured), and search text or lookup coordinates to Nominatim or a configured geocoder, together with the IP address. Their provider policies apply. Update the app to use offline maps and city lookup.
+**Older versions:** Versions 3.1 and earlier may send tile requests to OpenFreeMap (or MapTiler when configured), and search text or lookup coordinates to Nominatim or a configured geocoder, together with the IP address. Their provider policies apply. Current versions provide an online-map toggle and optional saved regions.
 
 Data is sent over encrypted connections (HTTPS) when you use the related feature. To avoid transfers, use the App as a guest,
 skip the feature, or turn off crash reports — some features (sync, community) will then be unavailable.
@@ -212,8 +212,8 @@ We will announce changes in the App or on this page at least 7 days in advance (
 </main>
 
 
-## 2026-10-24: 선택형 오프라인 상세 지도 / Optional offline regional maps
+## 2026-10-24: 온라인 상세 지도와 오프라인 지역 / Online detail and saved regions
 
-3.3부터 기본 세계지도와 도시 검색은 기기 내에서 동작합니다. 사용자가 “이 지역 저장”을 누를 때만 선택 구역의 타일 번호와 IP 주소, 앱 식별 문자열이 OpenFreeMap(tiles.openfreemap.org)에 전송됩니다. 이 요청 구역은 선택한 위치를 추론할 수 있습니다. 저장 완료된 지도는 이후 네트워크 없이 표시하며 지역 삭제는 앱의 오프라인 지도 화면에서 할 수 있습니다. 지도 다운로드는 선택 사항이며 운영자가 지도 서버를 운영하지 않습니다. 날씨·로그인·동기화 등 다른 기능의 통신은 별개입니다.
+3.3.2부터 기본 세계지도와 도시 검색은 기기 내에서 동작하며, 온라인 상세 지도는 기본으로 켜져 있습니다. 지도를 확대·이동하거나 지역 다운로드를 요청하면 화면 또는 선택 구역의 타일 번호, IP 주소, 앱 식별 문자열이 OpenFreeMap(tiles.openfreemap.org, Hyperknot Software Kft., 헝가리) 및 해당 CDN(Cloudflare 등)에 HTTPS로 전달됩니다. 요청 구역으로 선택한 위치를 추론할 수 있습니다. 지도 설정에서 온라인 상세 지도를 끄면 추가 온라인 표시 요청을 중단하고 저장한 지역과 내장 세계지도를 사용합니다. 지역 다운로드는 별도로 사용자가 시작할 때만 통신합니다. 저장 지역은 기기에 보관되며 지도와 다운로드 화면에서 삭제할 수 있습니다. 제공자 기록의 보관·삭제는 https://openfreemap.org/privacy/ 및 CDN 방침에 따릅니다. 운영자는 지도 서버를 운영하거나 제공자의 접속 기록에 접근하지 않습니다. 날씨·로그인·동기화 등 다른 기능의 통신은 별개입니다.
 
-From 3.3, the bundled world overview and city search run on-device. Only when the user selects Save this region, the selected region tile coordinates, IP address and app identifier are sent to OpenFreeMap (tiles.openfreemap.org). The requested region may reveal the selected location. Completed packs render without further network requests and can be removed in Offline maps. Downloading is optional; no operator-hosted map server is used. Weather, login and synchronization have separate network behavior.
+From 3.3.2, the world overview and city search run on-device; online detail is enabled by default. Panning or zooming the map and requesting a region download send viewport or selected-region tile coordinates, the connection IP and app identifier over HTTPS to OpenFreeMap (tiles.openfreemap.org; Hyperknot Software Kft., Hungary) and its CDN, such as Cloudflare. The requested area may reveal the selected location. Disable Online detail in Maps & downloads to stop additional online display requests and use saved regions and the bundled overview. Regional downloads make requests only when explicitly started. Saved regions stay on-device and can be removed in Maps & downloads. Provider log retention and deletion follow https://openfreemap.org/privacy/ and CDN policies. The operator does not host the map service or access provider logs. Weather, sign-in and synchronization have separate network behavior.
