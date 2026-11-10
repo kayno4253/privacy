@@ -12,8 +12,8 @@
 </style>
 </head>
 <body>
-<h1>CoupleGuard 개인정보 처리방침</h1><p><strong>2.1.0 등록 검토용 초안 — 아직 게시되지 않았습니다. 이 후보의 두 기기 동기화·결제·광고는 비활성 상태입니다. 활성화 전에 서버 보관·삭제 절차와 데이터 처리를 다시 검증해야 합니다.</strong></p>
-<p>시행일: 2026-11-01 · 앱: CoupleGuard (패키지 com.herion.coupleguard) · 개발자: Herion</p>
+<h1>CoupleGuard 개인정보 처리방침</h1>
+<p>시행일: 2026-11-10 · 앱: CoupleGuard (패키지 com.herion.coupleguard) · 개발자: Herion</p>
 
 <h2>1. 요약</h2>
 <ul>
@@ -42,7 +42,7 @@
 </ul>
 
 <h2>4. 파트너 연결(선택)을 켰을 때</h2>
-<p>초대 코드로 두 기기를 연결하면 다음 항목이 Google Firebase(Firestore, 익명 인증)에 저장되어 상대 기기로 전달됩니다: 안부 확인, 기분, 오늘의 질문 답, 경계 합의, 안심 신호와 발송 기록, SOS(사용자가 허용한 경우 위치 포함), 기록 이벤트. <strong>PIN, 비상 연락처, 위치 공유 세션의 위치는 전송되지 않습니다.</strong> 연결을 끊으면 서버의 짝 정보에서 제거되며, 남은 데이터는 각 기기에만 남습니다. 저장 위치: Google Cloud(리전은 프로젝트 설정에 따름). 연결 해제 자체는 서버 이벤트 삭제를 보장하지 않습니다. 서버 연동 출시 전에 삭제 기능과 보관 기간을 확정해야 합니다.</p>
+<p>초대 코드로 두 기기를 연결하면 다음 항목이 Google Firebase(Firestore, 익명 인증)에 저장되어 상대 기기로 전달됩니다: 안부 확인, 기분, 오늘의 질문 답, 경계 합의, 안심 신호와 발송 기록, SOS(사용자가 허용한 경우 위치 포함), 기록 이벤트. <strong>PIN, 비상 연락처, 위치 공유 세션의 위치는 전송되지 않습니다.</strong> 연결을 끊으면 내가 보낸 기록이 서버에서 삭제되고 짝 정보에서 제거되며, 남은 데이터는 각 기기에만 남습니다. 저장 위치: Google Cloud(미국 리전).</p>
 
 <h2>5. 결제·광고</h2>
 <ul>
@@ -50,7 +50,7 @@
   <li>광고는 Google AdMob의 <strong>비개인화 광고</strong>만 요청하며 광고 ID 권한(AD_ID)을 사용하지 않습니다. AdMob의 데이터 처리는 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따릅니다.</li>
 </ul>
 
-<h2>선택 기능: 사이트 차단과 화면 공유</h2><p>사이트 차단은 동의 후 Android 로컬 VPN에서 일반 DNS 요청만 처리합니다. 차단하지 않은 도메인 질의는 Google Public DNS(dns.google)에 HTTPS로 전송됩니다. 일반 인터넷 트래픽은 터널을 통과하지 않으며 앱은 접속 기록을 저장하거나 파트너에게 보내지 않습니다. 보안 DNS는 필터를 우회할 수 있습니다. 알림의 중지 버튼으로 끌 수 있습니다. 앱 차단용 접근성 서비스는 선택한 앱 실행을 감지하는 데 사용하며 사용자가 시스템 설정에서 해제할 수 있습니다. 화면 공유는 활성화된 빌드에서 사용자가 시스템 동의 창으로 직접 시작할 때 화면 콘텐츠를 연결 상대에게 전송하는 기능이며 녹화 파일을 저장하지 않습니다. 현재 후보는 원격 연결을 제공하지 않습니다.</p><h2>6. 제3자 제공</h2>
+<h2>선택 기능: 사이트 차단과 화면 공유</h2><p>사이트 차단은 동의 후 Android 로컬 VPN에서 일반 DNS 요청만 처리합니다. 차단하지 않은 도메인 질의는 Google Public DNS(dns.google)에 HTTPS로 전송됩니다. 일반 인터넷 트래픽은 터널을 통과하지 않으며 앱은 접속 기록을 저장하거나 파트너에게 보내지 않습니다. 보안 DNS는 필터를 우회할 수 있습니다. 알림의 중지 버튼으로 끌 수 있습니다. 앱 차단용 접근성 서비스는 선택한 앱 실행을 감지하는 데 사용하며 사용자가 시스템 설정에서 해제할 수 있습니다. 화면 공유(같이보기)는 사용자가 시스템 동의 창으로 직접 시작할 때만 화면을 연결된 상대에게 실시간 전송하며(WebRTC, 연결 정보 교환에 Firebase 사용), 녹화 파일을 만들거나 서버에 저장하지 않습니다. 공유 중에는 상시 알림이 표시되고 언제든 멈출 수 있습니다.</p><h2>6. 제3자 제공</h2>
 <p>사용자의 기록을 제3자에게 판매·제공하지 않습니다. 위 기능의 서비스 제공자(Google) 외에는 데이터가 전달되지 않습니다.</p>
 
 <h2>7. 보관·삭제</h2>
@@ -68,7 +68,7 @@
 <hr>
 <h1 class="en">CoupleGuard Privacy Policy (English)</h1>
 <div class="en">
-<p>Effective 2026-11-01 · App: CoupleGuard (com.herion.coupleguard) · Developer: Herion</p>
+<p>Effective 2026-11-10 · App: CoupleGuard (com.herion.coupleguard) · Developer: Herion</p>
 <h2>Summary</h2>
 <ul>
   <li>By default <strong>all data stays on your device</strong>. There is no account and the developer cannot see your records.</li>
@@ -80,8 +80,8 @@
 <h2>Permissions</h2>
 <p>Location (while in use) only for location sharing or SOS; notifications for reminders; biometrics for unlock (handled by the OS); internet for Play Billing, AdMob and Firebase.</p>
 <h2>When partner linking is on</h2>
-<p>Check-ins, moods, answers, agreements, signals, SOS (with location if you allowed it) are stored in Firebase Firestore (anonymous auth) and delivered to the partner's device. <strong>PIN, emergency contact and location-sharing points are never uploaded.</strong> Unlinking removes you from the pair; this does not itself delete server events. Server deletion must be implemented before sync is released.</p>
-<h2>Optional site protection</h2><p>With your consent, a local VPN filters standard DNS queries. Allowed queries are sent to Google Public DNS (dns.google) over HTTPS. Ordinary traffic bypasses the tunnel; browsing history is not stored or shared with a partner. Encrypted DNS may bypass filtering. Stop it from the notification. Remote pairing, payments and ads are unavailable in this release candidate.</p><h2>Payments and ads</h2>
+<p>Check-ins, moods, answers, agreements, signals, SOS (with location if you allowed it) are stored in Firebase Firestore (anonymous auth) and delivered to the partner's device. <strong>PIN, emergency contact and location-sharing points are never uploaded.</strong> Unlinking deletes the records you sent from the server and removes you from the pair. Storage: Google Cloud (US region).</p>
+<h2>Optional site protection</h2><p>With your consent, a local VPN filters standard DNS queries. Allowed queries are sent to Google Public DNS (dns.google) over HTTPS. Ordinary traffic bypasses the tunnel; browsing history is not stored or shared with a partner. Encrypted DNS may bypass filtering. Stop it from the notification. The app-block feature uses an accessibility service only to detect launches of apps you chose; you can turn it off in system settings. Screen sharing (Watch together) starts only when you approve the system prompt, streams your screen live to your linked partner (WebRTC, with Firebase used to set up the connection), and never records or stores it on a server. A notification is shown while sharing.</p><h2>Payments and ads</h2>
 <p>Payments are processed by Google Play; the app never sees card details. Ads are non-personalized AdMob ads; the AD_ID permission is not used.</p>
 <h2>Deletion</h2>
 <p>Settings → Erase all data (device). Settings → Link partner → Unlink (server). For full server deletion email <a href="mailto:kayno@naver.com">kayno@naver.com</a>; handled within 7 days.</p>
