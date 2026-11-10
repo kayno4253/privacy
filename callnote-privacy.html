@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>전화영어노트 개인정보 처리방침 / Privacy Policy</title>
+<style>body{font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#222}h1{font-size:1.5rem}h2{font-size:1.1rem;margin-top:2rem}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:4px 8px;text-align:left}</style>
+</head><body>
+<h1>전화영어노트 개인정보 처리방침</h1>
+<p>시행일: 2026-11-10 (초안 — 운영자 검토 필요)</p>
+<h2>1. 처리하는 정보와 위치</h2>
+<p>전화영어노트(이하 "앱")는 회원가입이 없고 서버가 없습니다. 사용자가 고른 수업 녹음 파일, 그 파일로 만든 대본·교정 카드·복습 기록은 모두 사용자의 기기 안(앱 전용 저장 공간)에서만 처리·저장됩니다. 운영자는 어떤 정보도 수집하거나 전송받지 않습니다.</p>
+<p>받아쓰기는 기기 안에 들어 있는 음성 인식 모델(whisper.cpp, OpenAI Whisper base 모델)로 이루어지며, 녹음·대본·카드는 인터넷으로 전송되지 않습니다. 인터넷 권한은 무료 이용자에게 광고(Google AdMob, 6절)를 보여 주는 데에만 쓰입니다.</p>
+<h2>2. 녹음과 동의</h2>
+<p>앱은 통화를 녹음하지 않으며 마이크 권한을 요청하지 않습니다. 사용자가 다른 방법으로 남긴 녹음 파일만 가져옵니다. 녹음에는 강사(상대방)의 목소리가 담기므로, 사용자는 녹음과 이용에 대해 상대방의 동의를 받아야 합니다.</p>
+<h2>3. 권한</h2>
+<table>
+<tr><th>권한</th><th>목적</th></tr>
+<tr><td>알림(POST_NOTIFICATIONS)</td><td>사용자가 켠 경우 매일 복습 알림, 긴 받아쓰기 진행 알림</td></tr>
+<tr><td>포그라운드 서비스(dataSync / mediaProcessing)</td><td>화면이 꺼져도 긴 녹음의 받아쓰기를 이어가기</td></tr>
+<tr><td>부팅 후 알림 재등록(RECEIVE_BOOT_COMPLETED)</td><td>예약한 복습 알림 유지</td></tr>
+<tr><td>Google Play 결제(BILLING)</td><td>프로 구독·평생 이용권 결제·복원(Play 스토어 앱이 처리)</td></tr>
+<tr><td>인터넷(INTERNET, ACCESS_NETWORK_STATE)</td><td>무료 이용자의 광고(Google AdMob) 표시. 녹음·대본은 보내지 않음</td></tr>
+<tr><td>광고 ID(AD_ID), ACCESS_ADSERVICES_*</td><td>AdMob SDK가 추가: 광고 제공·빈도 제한·부정 방지</td></tr>
+</table>
+<p>파일은 안드로이드 기본 파일 선택기로 사용자가 고른 파일에만 접근합니다(저장소 전체 권한 없음).</p>
+<h2>4. 결제</h2>
+<p>구독과 평생 이용권은 Google Play 결제로 처리되며, 운영자는 카드 정보 등 결제 정보를 받지 않습니다.</p>
+<h2>5. 백업과 삭제</h2>
+<p>설정 &gt; 백업 파일 내보내기로 대본·카드·설정을 사용자가 직접 파일로 저장할 수 있습니다(녹음 파일은 용량 때문에 포함되지 않음). 설정 &gt; 모든 데이터 삭제 또는 앱 삭제로 기기 안의 녹음·대본·카드가 모두 지워집니다. 수업마다 "녹음만 지우기"도 할 수 있습니다.</p>
+<h2>6. 광고·분석</h2>
+<p>앱에는 분석·오류 수집 도구가 없습니다. 무료 이용자에게는 수업 목록·복습·리포트 화면 하단 배너와, 처리된 수업이나 복습을 마치고 목록으로 돌아올 때 가끔 전면 광고(Google AdMob)가 표시됩니다. 수업 대본·녹음 재생·카드 복습 화면에는 광고가 없으며, 프로 이용자와 광고 보상 체험(24시간) 중에는 어떤 광고도 표시되지 않습니다.
+AdMob은 광고 제공·빈도 제한·부정 방지를 위해 기기의 광고 ID, IP 주소, 기기·앱 정보, 광고 상호작용을 수집하여 Google과 공유할 수 있습니다. 녹음·대본·카드는 광고에 쓰이지 않고 기기 밖으로 나가지 않습니다.
+유럽경제지역·영국 등 동의가 필요한 지역에서는 Google의 동의 관리 도구(UMP)로 맞춤 광고 동의를 먼저 묻고, 설정 &gt; 광고 개인정보 옵션에서 언제든 바꿀 수 있습니다. 기기 설정에서 광고 ID를 삭제하거나 재설정할 수 있습니다.
+자세한 내용: <a href="https://policies.google.com/technologies/ads">Google 광고 정책</a>, <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>.</p>
+<h2>7. 문의</h2>
+<p>kayno@naver.com (TODO owner)</p>
+<hr>
+<h1>CallNote Privacy Policy</h1>
+<p>Effective 2026-11-10 (draft — to be reviewed by the operator)</p>
+<p>CallNote has no account and no server. Lesson recordings you pick, and the transcripts, correction cards and review history made from them, are processed and stored only in the app's private storage on your device. Transcription uses a speech model bundled in the app (whisper.cpp with the OpenAI Whisper base model); recordings, transcripts and cards are never sent over the internet. The internet permission is used only to show ads (Google AdMob) to free users.</p>
+<p>The app never records calls and does not request microphone access. You import recordings you made yourself; because they contain your tutor's voice, you are responsible for getting their consent.</p>
+<p>Permissions: notifications (optional daily review reminder, progress of long transcriptions), foreground service (keep transcribing with the screen off), boot completed (keep scheduled reminders), Google Play billing, internet + AD_ID / ACCESS_ADSERVICES_* (ads, added by the AdMob SDK). Files are accessed only through the system file picker.</p>
+<p>Purchases are handled by Google Play. You can export a backup file (transcripts, cards, settings; recordings are not included) and delete all data in Settings. No analytics or crash reporting.</p>
+<p>Ads: free users see Google AdMob ads (a banner on the lessons, review and report screens and, now and then, a full-screen ad when returning to the list after a processed lesson or a finished review; never on the transcript, playback or card review screens, never for Pro users or during a rewarded 24-hour Pro pass). AdMob may collect the advertising ID, IP address, device and app information and ad interactions and share them with Google to serve, cap and protect ads; recordings, transcripts and cards are never used for ads. Where consent is required (EEA, UK and others) we ask through Google's consent tool (UMP) first; change it any time in Settings &gt; Ad privacy options, and reset or delete the advertising ID in your device settings. See <a href="https://policies.google.com/technologies/ads">Google's ad policies</a>. Contact: kayno@naver.com (TODO owner)</p>
+</body></html>
