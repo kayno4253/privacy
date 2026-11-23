@@ -87,7 +87,7 @@ Herion(이하 "운영자")은 My Travel Map(이하 "앱") 이용자의 개인정
 
 - 위치 권한은 "앱 사용 중"만 요청합니다. 경로 기록 중에는 화면을 꺼도 기록이 이어지도록 **상시 알림이 있는
   포그라운드 서비스**를 쓰며, 이용자가 언제든 멈출 수 있습니다.
-- 위치는 이용자가 저장한 장소·경로로만 남고, 날씨 조회(MET Norway) 때 조회할 장소 좌표를 보냅니다. 기본 세계지도·도시 검색은 기기에서 처리하며, 3.3의 상세 지역 다운로드는 아래 안내를 따릅니다.
+- 위치는 이용자가 저장한 장소·경로로만 남고, 날씨 조회(MET Norway) 때 조회할 장소 좌표를 보냅니다. 기본 세계지도와 도시 검색은 기기에서 처리합니다. 온라인 상세 지도 표시와 지역 다운로드 시 OpenFreeMap 및 CDN에 타일 번호, IP 주소, 앱 식별 문자열이 전달될 수 있습니다. 아래 버전별 안내에서 전송 조건과 설정 방법을 확인할 수 있습니다.
 - 다른 이용자에게 **실시간 현재 위치를 공유하지 않습니다**. 친구 공유를 켜면 친구로 추가한 사람에게 다녀온 장소가 보이고,
   피드에 글을 올리면 그 장소의 좌표가 약 1km 단위로 반올림되어 로그인한 이용자에게 보입니다.
 
@@ -191,7 +191,7 @@ If Android Auto Backup is on, your travel records and settings (not photos) may 
 ### 6. Location
 
 The App requests "while in use" location only. While you record a route it uses a **foreground service with an ongoing notification**
-so recording continues with the screen off; you can stop it at any time. Weather requests send the selected place coordinates to MET Norway. Map and city lookup in version 3.2 and later are processed on device. Signed-in saved records continue to sync as described above. The App **never shares your live location** with other users. If you enable sharing, people you added as friends can see
+so recording continues with the screen off; you can stop it at any time. Weather requests send the selected place coordinates to MET Norway. The bundled world overview and city search run on device. Online map detail and region downloads can send tile coordinates, your IP address and the app identifier to OpenFreeMap and its CDN as described below. Signed-in saved records continue to sync as described above. The App **never shares your live location** with other users. If you enable sharing, people you added as friends can see
 your visited places; if you post to the feed, that place's coordinates are rounded to about 1 km and visible to signed-in users.
 
 ### 7. Children
